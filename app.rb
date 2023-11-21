@@ -1,4 +1,11 @@
+require_relative './data_manger/game_data_manger'
+require 'pry'
 class App
+   include GameDataManger 
+   def initialize
+    @games = []
+    @authors = []
+   end10
   def display_menu
     puts ' '
     puts '*' * 50
@@ -27,7 +34,7 @@ class App
       6 => -> { 'list_all_authors' },
       7 => -> { 'add_book' },
       8 => -> { 'add_music_album' },
-      9 => -> { 'add_game' }
+      9 => -> { create_game }
     }
     case option
     when 1, 2, 3, 4, 5, 6, 7, 8, 9
