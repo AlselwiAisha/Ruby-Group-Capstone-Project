@@ -9,4 +9,11 @@ class Game
   def can_be_archived?
     (Time.now - @last_played_at) >= 2 * 365 * 24 * 60 * 60 # 2 years in seconds
   end
+
+  def to_json(*args)
+    {
+      'multiplayer' => @multiplayer,
+      'last_played_at' => @last_played_at
+    }.to_json(*args)
+  end
 end
