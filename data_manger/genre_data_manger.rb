@@ -1,4 +1,4 @@
-
+require_relative '../lib/genre'
 
 module GenreModule
     def list_genre

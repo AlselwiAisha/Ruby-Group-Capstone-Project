@@ -1,4 +1,4 @@
-
+require_relative '../lib/music_album'
 
 module MusicAlbumModule
     def create_music_album(publish_date, on_spotify)
