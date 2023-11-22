@@ -1,18 +1,24 @@
 require_relative 'data_manger/game_data_manger'
+require_relative 'data_manger/author_data_manger'
 
 class App
   include GameDataManger
   def initialize
     @games = GameDataManger.load_games
-    @authors = []
+    @authors = AuthorDataManger.load_authors
   end
 
   def save_data
     GameDataManger.save_game(@games)
+    AuthorDataManger.save_author(@authors)
   end
 
   def list_games
     @games.each { |game| puts "Multiplayer: #{game.multiplayer}, Last played at: #{game.last_played_at}" }
+  end
+
+  def list_authors
+    @authors.each { |author| puts "Author first name: #{author.first_name}, Author last name: #{author.last_name}" }
   end
 
   def display_menu
@@ -41,7 +47,7 @@ class App
       3 => -> { list_games },
       4 => -> { 'list_all_genres' },
       5 => -> { 'list_all_labels' },
-      6 => -> { 'list_all_authors' },
+      6 => -> { list_authors },
       7 => -> { 'add_book' },
       8 => -> { 'add_music_album' },
       9 => -> { create_game },
