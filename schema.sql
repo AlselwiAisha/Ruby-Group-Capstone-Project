@@ -53,3 +53,18 @@ CREATE TABLE item_labels (
     FOREIGN KEY (item_id) REFERENCES Item(id),
     FOREIGN KEY (label_id) REFERENCES labels(id)
 );
+
+-- Music Album 
+CREATE TABLE genre(
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(150),
+    item_id INTEGER,
+    FOREIGN KEY(item_id) REFERENCES Item(id)
+)
+CREATE TABLE musicAlbum (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    on_spotify BOOLEAN,
+    publish_date DATE,
+    item_id INTEGER,
+    FOREIGN KEY(item_id) REFERENCES Item(id)
+);
