@@ -1,0 +1,26 @@
+[
+  {
+    "id": 648,
+    "publish_date": "2019-11-11",
+    "archived": false,
+    "label": {
+      "id": 834,
+      "title": "Harry Potter",
+      "color": "Blue"
+    },
+    "publisher": "Reily Printers",
+    "cover_state": "New"
+  },
+  {
+    "id": 433,
+    "publish_date": "2020-12-12",
+    "archived": false,
+    "label": {
+      "id": 939,
+      "title": "A New Dawn",
+      "color": "REd"
+    },
+    "publisher": "High Flyers",
+    "cover_state": "New"
+  }
+]
