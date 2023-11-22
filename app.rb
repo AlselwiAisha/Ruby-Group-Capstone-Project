@@ -3,17 +3,24 @@ require_relative 'data_manger/game_data_manger'
 require_relative 'data_manger/author_data_manger'
 require_relative 'data_manger/book_data_manager'
 require_relative 'data_manger/label_data_manager'
+require_relative 'data_manger/genre_data_manger'
+require_relative 'data_manger/musicalbum_data_manger'
 
 class App
   include GameDataManger
   include BookDataManager
   include LabelDataManager
+  include GenreModule
+  include MusicAlbumModule
 
   def initialize
     @games = GameDataManger.load_games
     @authors = AuthorDataManger.load_authors
     @books = BookDataManager.load_books
     @labels = LabelDataManager.load_labels
+    @genres = GenreModule.load_genres
+    @albums = MusicAlbumModule.load_musics
+
   end
 
   def save_data
@@ -21,6 +28,8 @@ class App
     AuthorDataManger.save_author(@authors)
     BookDataManager.save_books(@books)
     LabelDataManager.save_labels(@labels)
+    GenreModule.save_genre(@genres)
+    MusicAlbumModule.save_music(@albums)
   end
 
   def list_games
@@ -82,6 +91,18 @@ class App
     @labels << label
   end
 
+  def list_musics
+    puts 'List of Musics:'
+    @albums.each { |album| puts "Is on spotify: #{album.on_spotify}, Publish Date: #{album.publish_date}" }
+  end
+
+  def list_genres
+    puts 'List of Genres:'
+    @genres.each_with_index do |genre, i|
+      puts "#{i + 1} - Genre name: #{genre.name}" if genre
+    end
+  end
+
   def display_menu
     puts ' '
     puts '*' * 50
@@ -104,13 +125,13 @@ class App
     option = gets.chomp.to_i
     options = {
       1 => -> { list_books },
-      2 => -> { 'list_all_music_albums' },
+      2 => -> { list_musics },
       3 => -> { list_games },
-      4 => -> { 'list_all_genres' },
+      4 => -> { list_genres },
       5 => -> { list_labels },
       6 => -> { list_authors },
       7 => -> { add_book },
-      8 => -> { 'add_music_album' },
+      8 => -> { create_music },
       9 => -> { create_game },
       10 => lambda {
         save_data

@@ -13,4 +13,10 @@ class Genre
     @items << item
     item.genre = self
   end
+
+  def to_json(*args)
+    {
+      'genre_name' => @name
+    }.to_json(*args)
+  end
 end

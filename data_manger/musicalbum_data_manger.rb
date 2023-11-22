@@ -1,4 +1,7 @@
 require_relative '../lib/music_album'
+require_relative '../lib/genre'
+require 'json'
+require 'date'
 
 module MusicAlbumModule
  def create_music
