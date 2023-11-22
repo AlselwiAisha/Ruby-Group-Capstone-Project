@@ -34,4 +34,23 @@ module GameDataManger
     @authors << author
     puts 'Game added successfully with author'
   end
+
+  def self.load_games
+    if File.exist?('./data/games.json')
+      games = JSON.parse(File.read('./data/games.json')).map do |game|
+        Game.new(game['multiplayer'], game['last_played_at'])
+      end
+    else
+      File.write('./data/games.json', JSON.dump([]))
+    end
+    games.any? ? games : []
+  end
+
+  def self.save_game(games)
+    if games.any?
+      File.write('./data/games.json', JSON.dump(games))
+    else
+      File.write('./data/games.json', JSON.dump([]))
+    end
+  end
 end
