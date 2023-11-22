@@ -19,7 +19,7 @@ class Book < Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      label: @label&.to_h,
+      label: @label,
       publisher: @publisher,
       cover_state: @cover_state
     }

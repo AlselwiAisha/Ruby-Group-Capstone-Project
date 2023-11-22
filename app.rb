@@ -33,7 +33,8 @@ class App
 
   def list_books
     @books.each do |book|
-      puts "Book ID: #{book.id}, Publisher: #{book.publisher}, Cover State: #{book.cover_state}, Archived: #{book.archived}"
+      puts "Book ID: #{book.id}, Publisher: #{book.publisher}, " \
+           "Cover State: #{book.cover_state}, Archived: #{book.archived}"
     end
   end
 
@@ -41,7 +42,8 @@ class App
     @labels.each do |label|
       puts "Label ID: #{label.id}, Title: #{label.title}, Color: #{label.color}"
       label.items.each do |item|
-        puts "  Item ID: #{item.id}, Publish Date: #{item.publish_date}, Publisher: #{item.publisher}, Cover State: #{item.cover_state}, Archived: #{item.archived}"
+        puts "  Item ID: #{item.id}, Publish Date: #{item.publish_date}, Publisher: #{item.publisher}, " \
+             "Cover State: #{item.cover_state}, Archived: #{item.archived}"
       end
       puts '-' * 50
     end

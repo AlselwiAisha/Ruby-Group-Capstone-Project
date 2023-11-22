@@ -1,1 +1,17 @@
-[{"id":716,"title":"Harry Potter","color":"Blue"},{"id":890,"title":"A New Dawn","color":"REd"}]
+[
+  {
+    "id": 958,
+    "title": "Harry Potter",
+    "color": "Blue"
+  },
+  {
+    "id": 545,
+    "title": "A New Dawn",
+    "color": "REd"
+  },
+  {
+    "id": 585,
+    "title": "The Last Supper",
+    "color": "Black"
+  }
+]
