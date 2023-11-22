@@ -5,6 +5,6 @@ def main
     app.display_menu
     app.process_option
   end
- end
+end
 
 main
