@@ -32,7 +32,19 @@ class App
   end
 
   def list_books
-    @books.each { |book| puts "Book ID: #{book.id}, Publisher: #{book.publisher}, Cover State: #{book.cover_state}, Archived: #{book.archived}" }
+    @books.each do |book|
+      puts "Book ID: #{book.id}, Publisher: #{book.publisher}, Cover State: #{book.cover_state}, Archived: #{book.archived}"
+    end
+  end
+
+  def list_labels
+    @labels.each do |label|
+      puts "Label ID: #{label.id}, Title: #{label.title}, Color: #{label.color}"
+      label.items.each do |item|
+        puts "  Item ID: #{item.id}, Publish Date: #{item.publish_date}, Publisher: #{item.publisher}, Cover State: #{item.cover_state}, Archived: #{item.archived}"
+      end
+      puts '-' * 50
+    end
   end
 
   def add_book
@@ -89,7 +101,7 @@ class App
       2 => -> { 'list_all_music_albums' },
       3 => -> { list_games },
       4 => -> { 'list_all_genres' },
-      5 => -> { 'list_all_labels' },
+      5 => -> { list_labels },
       6 => -> { list_authors },
       7 => -> { add_book },
       8 => -> { 'add_music_album' },

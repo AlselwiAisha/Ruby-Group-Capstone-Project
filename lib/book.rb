@@ -11,7 +11,7 @@ class Book < Item
   end
 
   def can_be_archived?
-    super || @cover_state == "bad"
+    super || @cover_state == 'bad'
   end
 
   def to_hash
@@ -19,7 +19,7 @@ class Book < Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      label: @label&.to_hash,
+      label: @label&.to_h,
       publisher: @publisher,
       cover_state: @cover_state
     }
