@@ -24,11 +24,15 @@ class App
   end
 
   def list_games
+    puts 'List of Games:'
     @games.each { |game| puts "Multiplayer: #{game.multiplayer}, Last played at: #{game.last_played_at}" }
   end
 
   def list_authors
-    @authors.each { |author| puts "Author first name: #{author.first_name}, Author last name: #{author.last_name}" }
+    puts 'List of Authors:'
+    @authors.each_with_index do |author, i|
+      puts "#{i + 1} - Author name: #{author.first_name} #{author.last_name}" if author
+    end
   end
 
   def list_books
