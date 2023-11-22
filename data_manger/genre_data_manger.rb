@@ -2,7 +2,6 @@ require_relative '../lib/genre'
 require 'json'
 
 module GenreModule
-
   def self.load_genres
     if File.exist?('./data/genre.json')
       genres = JSON.parse(File.read('./data/genre.json')).map do |genre|

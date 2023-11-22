@@ -20,7 +20,6 @@ class App
     @labels = LabelDataManager.load_labels
     @genres = GenreModule.load_genres
     @albums = MusicAlbumModule.load_musics
-
   end
 
   def save_data

@@ -4,7 +4,7 @@ require 'json'
 require 'date'
 
 module MusicAlbumModule
- def create_music
+  def create_music
     print 'Is it on spotify ? (yes/no): '
     on_spotify_input = gets.chomp.downcase
     on_spotify = on_spotify_input == 'yes'
@@ -42,7 +42,6 @@ module MusicAlbumModule
     end
     musics.any? ? musics : []
   end
-
 
   def self.save_music(musics)
     if musics.any?
