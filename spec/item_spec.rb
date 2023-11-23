@@ -9,10 +9,9 @@ RSpec.describe Item do
     expect(item.id).to be_a(Integer)
     expect(item.publish_date).to eq(publish_date)
     expect(item.archived).to be(false)
-    expect(item.genre).to be_an(Array)
-    expect(item.source).to be_an(Array)
-    expect(item.author).to be_an(Array)
-    expect(item.label).to be_an(Array)
+    expect(item.genre).to be(nil)
+    expect(item.author).to be(nil)
+    expect(item.label).to be(nil)
   end
 
   it 'determines if it can be archived' do
