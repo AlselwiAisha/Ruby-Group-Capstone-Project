@@ -55,7 +55,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/egichuhis/Ruby-Group-Capstone-Project.git
+  git clone https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project.git
 ```
 
 ### Install
@@ -105,7 +105,7 @@ Start your interactive ruby shell `irb`:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/egichuhis/Ruby-Group-Capstone-Project/issues).
+Feel free to check the [issues page](https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +113,7 @@ Feel free to check the [issues page](https://github.com/egichuhis/Ruby-Group-Cap
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please give it a star on [GitHub](https://github.com/egichuhis/Ruby-Group-Capstone-Project).
+If you like this project please give it a star on [GitHub](https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
