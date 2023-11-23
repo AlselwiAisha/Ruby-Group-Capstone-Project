@@ -8,6 +8,7 @@ class Book < Item
     super(publish_date, archived: archived)
     @publisher = publisher
     @cover_state = cover_state
+    @archived = move_to_archive
   end
 
   def can_be_archived?
@@ -19,7 +20,6 @@ class Book < Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      label: @label,
       publisher: @publisher,
       cover_state: @cover_state
     }

@@ -5,12 +5,12 @@ describe Game do
 
   describe '#initialize' do
     it 'sets multiplayer' do
-      game = Game.new('2021-01-01', true, Time.now)
-      expect(game.multiplayer).to be true
+      game = Game.new('2010-01-01', true, Time.now)
+      expect(game.multiplayer).to eq true
     end
 
     it 'sets last_played_at' do
-      time = Time.now
+      time = DateTime.parse('2012-01-01').to_time
       game = Game.new('2021-01-01', true, time)
       expect(game.last_played_at).to eq(time)
     end
@@ -22,7 +22,7 @@ describe Game do
     end
 
     it 'Testing last played at' do
-      expect(game.last_played_at).to eq '2021-11-11'
+      expect(game.last_played_at.strftime('%Y-%m-%d %H:%M:%S %z')).to eq "2021-11-11 00:00:00 +0000"
     end
   end
   describe '#can_be_archived?' do
@@ -42,7 +42,7 @@ describe Game do
       json_data = game.to_json
       expect(json_data).to include('"publish_date":"2021-01-01"')
       expect(json_data).to include('"multiplayer":true')
-      expect(json_data).to include('"last_played_at":"2021-11-11"')
+      expect(json_data).to include('"last_played_at":"2021-11-11 00:00:00 +0000"')
     end
   end
 end
