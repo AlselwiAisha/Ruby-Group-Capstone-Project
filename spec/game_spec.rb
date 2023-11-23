@@ -22,7 +22,7 @@ describe Game do
     end
 
     it 'Testing last played at' do
-      expect(game.last_played_at.strftime('%Y-%m-%d %H:%M:%S %z')).to eq "2021-11-11 00:00:00 +0000"
+      expect(game.last_played_at.strftime('%Y-%m-%d %H:%M:%S %z')).to eq '2021-11-11 00:00:00 +0000'
     end
   end
   describe '#can_be_archived?' do

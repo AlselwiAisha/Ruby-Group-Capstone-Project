@@ -42,7 +42,7 @@ module GameDataManger
   def self.load_games
     if File.exist?('./data/games.json')
       games = JSON.parse(File.read('./data/games.json')).map do |game|
-        Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'], archived:game['archived'])
+        Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'], archived: game['archived'])
       end
     else
       File.write('./data/games.json', JSON.dump([]))

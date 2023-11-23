@@ -35,7 +35,7 @@ class App
     puts 'List of Games:'
     @games.each do |game|
       puts "Pulish date:#{game.publish_date}, Multiplayer: #{game.multiplayer}, "\
-       "Last played at: #{game.last_played_at}, Archived: #{game.archived}"
+           "Last played at: #{game.last_played_at}, Archived: #{game.archived}"
     end
   end
 
