@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Video Presentation ](#-video-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -35,10 +36,18 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Basic UI**
+- **Data Preservation**
+- **Class implementation with methods**
+- **Add and list the classes**
+- **Unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Video Presentation <a name="live-demo"></a>
+
+- [Video Presentation](https://drive.google.com/file/d/164uPJVRolzF1oq6nGKJC1kN_hhrjmHEm/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
