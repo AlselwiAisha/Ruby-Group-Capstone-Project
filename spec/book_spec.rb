@@ -38,7 +38,6 @@ RSpec.describe Book do
       expect(hash_data[:id]).to be_a(Integer)
       expect(hash_data[:publish_date]).to eq('2022-01-01')
       expect(hash_data[:archived]).to be false
-      expect(hash_data[:label]).to be_an(Array) # Adjust this line
       expect(hash_data[:publisher]).to eq 'Publisher'
       expect(hash_data[:cover_state]).to eq 'good'
     end

@@ -33,7 +33,10 @@ class App
 
   def list_games
     puts 'List of Games:'
-    @games.each { |game| puts "Multiplayer: #{game.multiplayer}, Last played at: #{game.last_played_at}" }
+    @games.each do |game|
+      puts "Pulish date:#{game.publish_date}, Multiplayer: #{game.multiplayer}, " \
+           "Last played at: #{game.last_played_at}, Archived: #{game.archived}"
+    end
   end
 
   def list_authors
@@ -62,13 +65,13 @@ class App
   end
 
   def add_book
-    print 'Enter publish date (YYYY-MM-DD): '
+    print 'Enter book publish date (YYYY-MM-DD): '
     publish_date = gets.chomp
 
-    print 'Enter publisher: '
+    print 'Enter publisher name: '
     publisher = gets.chomp
 
-    print 'Enter cover state: '
+    print 'Enter book cover state (good / bad): '
     cover_state = gets.chomp
 
     book = Book.new(publish_date, publisher, cover_state)
@@ -100,24 +103,6 @@ class App
     @genres.each_with_index do |genre, i|
       puts "#{i + 1} - Genre name: #{genre.name}" if genre
     end
-  end
-
-  def display_menu
-    puts ' '
-    puts '*' * 50
-    puts "|\t\tWelcome to our App!\t\t|"
-    puts '*' * 50
-    puts 'Please choose an option by entering a number:'
-    puts '1 - List all books'
-    puts '2 - List all music albums'
-    puts '3 - List all games'
-    puts '4 - List all genres'
-    puts '5 - List all labels'
-    puts '6 - List all authors'
-    puts '7 - Add a book'
-    puts '8 - Add a music album'
-    puts '9 - Add a game'
-    puts '10 - Exit'
   end
 
   def process_option

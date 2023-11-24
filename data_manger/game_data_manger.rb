@@ -5,9 +5,13 @@ require 'date'
 
 module GameDataManger
   def create_game
+    print 'Enter publish date (YYYY-MM-DD): '
+    publish_date = gets.chomp
+
     print 'Is the game multiplayer? (yes/no): '
     multiplayer_input = gets.chomp.downcase
     multiplayer = multiplayer_input == 'yes'
+
     print 'Enter the last played date (YYYY-MM-DD):'
     date_input = gets.chomp
 
@@ -18,7 +22,7 @@ module GameDataManger
       create_game
     end
 
-    game = Game.new(multiplayer, last_played_at)
+    game = Game.new(publish_date, multiplayer, last_played_at)
     @games << game
 
     create_author
@@ -38,7 +42,7 @@ module GameDataManger
   def self.load_games
     if File.exist?('./data/games.json')
       games = JSON.parse(File.read('./data/games.json')).map do |game|
-        Game.new(game['multiplayer'], game['last_played_at'])
+        Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'], archived: game['archived'])
       end
     else
       File.write('./data/games.json', JSON.dump([]))

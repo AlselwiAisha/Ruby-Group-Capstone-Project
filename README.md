@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Video Presentation ](#-video-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -35,10 +36,18 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Basic UI**
+- **Data Preservation**
+- **Class implementation with methods**
+- **Add and list the classes**
+- **Unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Video Presentation <a name="live-demo"></a>
+
+- [Video Presentation](https://drive.google.com/file/d/164uPJVRolzF1oq6nGKJC1kN_hhrjmHEm/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -55,7 +64,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/egichuhis/Ruby-Group-Capstone-Project.git
+  git clone https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project.git
 ```
 
 ### Install
@@ -105,7 +114,7 @@ Start your interactive ruby shell `irb`:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/egichuhis/Ruby-Group-Capstone-Project/issues).
+Feel free to check the [issues page](https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +122,7 @@ Feel free to check the [issues page](https://github.com/egichuhis/Ruby-Group-Cap
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please give it a star on [GitHub](https://github.com/egichuhis/Ruby-Group-Capstone-Project).
+If you like this project please give it a star on [GitHub](https://github.com/AlselwiAisha/Ruby-Group-Capstone-Project).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
