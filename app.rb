@@ -65,13 +65,13 @@ class App
   end
 
   def add_book
-    print 'Enter publish date (YYYY-MM-DD): '
+    print 'Enter book publish date (YYYY-MM-DD): '
     publish_date = gets.chomp
 
-    print 'Enter publisher: '
+    print 'Enter publisher name: '
     publisher = gets.chomp
 
-    print 'Enter cover state: '
+    print 'Enter book cover state (good / bad): '
     cover_state = gets.chomp
 
     book = Book.new(publish_date, publisher, cover_state)
